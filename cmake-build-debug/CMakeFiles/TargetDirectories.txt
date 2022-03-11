@@ -1,0 +1,3 @@
+C:/Users/joaog/CLionProjects/TrabPOO/cmake-build-debug/CMakeFiles/TrabPOO.dir
+C:/Users/joaog/CLionProjects/TrabPOO/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/joaog/CLionProjects/TrabPOO/cmake-build-debug/CMakeFiles/rebuild_cache.dir
