@@ -11,7 +11,6 @@
 void imprimeRelatorios(Cidade *cidade){
     Relatorios *relatorios = new Relatorios();
     relatorios->relatorio1(cidade);
-    /*
     relatorios->relatorio2(cidade);
     relatorios->relatorio3(cidade);
     relatorios->relatorio4(cidade);
@@ -22,21 +21,22 @@ void imprimeRelatorios(Cidade *cidade){
     relatorios->relatorio9(cidade);
     relatorios->relatorio10(cidade);
     relatorios->relatorio11(cidade);
-     */
+
 }
 
 void inicializacao(Cidade *cidade){
     LeituraCSV *candidatos = new LeituraCSV("C:\\Users\\joaog\\CLionProjects\\TrabPOO\\candidatos.csv");
-    //LeituraCSV *partidos = new LeituraCSV("C:\\Users\\joaog\\CLionProjects\\TrabPOO\\partidos.csv");
+    LeituraCSV *partidos = new LeituraCSV("C:\\Users\\joaog\\CLionProjects\\TrabPOO\\partidos.csv");
     vector<vector<string>> conteudoCandidatos = candidatos->lerArquivo();
-    //vector<vector<string>> conteudoPartidos = partidos->lerArquivo();
+    vector<vector<string>> conteudoPartidos = partidos->lerArquivo();
     cidade->inserirDadosCandidatos(conteudoCandidatos);
-    //cidade->inserirDadosPartidos(conteudoPartidos);
+    cidade->inserirDadosPartidos(conteudoPartidos);
+    cidade->setDataEleicao("15/11/2020");
 }
 
 
 int main(int argc, char** argv) {
-    setlocale(LC_ALL, "");
+    setlocale(LC_ALL, "Portuguese");
     Cidade *cidade = new Cidade();
     inicializacao(cidade);
     cidade->qtdCandidatosEleitos();

@@ -35,10 +35,15 @@ int Partido::getVotosTotais(){
 }
 
 void Partido::setMenosVotado(Candidato *c){
-    this->menosVotado = c;
+    if(c != NULL){
+        this->menosVotado = c;
+    }
+
 }
 void Partido::setMaisVotado(Candidato *c){
-    this->maisVotado = c;
+    if(c != NULL){
+        this->maisVotado = c;
+    }
 }
 
 Candidato* Partido::getMenosVotado(){

@@ -37,7 +37,13 @@ public:
 
 private:
 
-    void formatacaoRelatorios2_5();
+    void formatacaoRelatorios2_5(Cidade *cidade, int relatorio, list<Candidato *> candidato);
+
+    void assisteRelatorio6(int votosTotais, int votosNominais, int votosLegenda, int candidatosEleitos);
+
+    void assisteRelatorio7(int votos, double porcentagem);
+
+    void assiteRelatorio8(Candidato *c);
 };
 
 

@@ -17,6 +17,7 @@ public:
     char sexo;
     Data *dataNascimento;
     int numeroPartido;
+    int idade;
 
     Candidato(string numero, int votosNominais, string situacao, string nome, string nomeUrna,
                    char sexo, string dataNascimento, string destinoVoto, int numeroPartido);
@@ -27,11 +28,12 @@ public:
     string getDestinoVoto();
     bool candidatoEleito();
 
+    void setIdade(Data *dataEleicao);
+
 private:
     int votosNominais;
     string destinoVoto;
     string nome;
-
 };
 
 

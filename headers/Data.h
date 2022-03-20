@@ -17,6 +17,7 @@ public:
 
     Data(string data);
     void imprimeData();
+    static unsigned int diferencaAnosEntreDatas(Data* d1, Data* d2);
 
 private:
     void setDia(int dia);
@@ -26,6 +27,8 @@ private:
     void setAno(int ano);
 
     void separaString(const string &data, vector<string> &array, const char delim = '/');
+
+    static int qtdAnoBissexto(Data *d);
 
 };
 

@@ -11,6 +11,7 @@
 #include "Partido.h"
 #include "Data.h"
 
+
 using namespace std;
 class Cidade {
 public:
@@ -19,6 +20,7 @@ public:
     int numeroEleitos;
     list<Candidato*> eleitos;
     Data *dataEleicao;
+    int qtdCandidatosCadastados;
 
     void setDataEleicao(string data);
 
@@ -38,6 +40,18 @@ public:
     void inserirDadosPartidos(vector<vector<string>> conteudoPartidos);
 
     void qtdCandidatosEleitos();
+
+    list<Candidato *> maisVotadosGeral(int inicio, int limite);
+
+    void setCandidatosCadastrados(int qtd);
+
+    int votosNominaisPartido(int numeroPartido);
+
+    list<Partido *> resumoPartidos();
+
+    int getVotosNominaisTotal();
+
+    int getVotosLegendaTotal();
 };
 
 

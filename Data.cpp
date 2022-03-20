@@ -5,6 +5,9 @@
 #include <cstdlib>
 #include "headers/Data.h"
 
+
+const int diasDoMes[12] = {31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
+
 Data::Data(string data){
 
     vector<string> array;
@@ -13,6 +16,8 @@ Data::Data(string data){
     this->setMes(stoi(array.at(1)));
     this->setAno(stoi(array.at(2)));
 }
+
+
 
 void Data::setDia(int dia){
 
@@ -37,6 +42,39 @@ void Data::setAno(int ano){
     }else{
         exit(1);
     }
+
+}
+
+int Data::qtdAnoBissexto(Data *d){
+    int ano = d->ano;
+    int qtd;
+
+    if(d->mes <= 2){
+        ano--;
+    }
+
+     qtd = (ano / 4) - (ano/ 100) + (ano/400);
+    return qtd;
+}
+
+unsigned int Data::diferencaAnosEntreDatas(Data* d1, Data* d2){
+
+    long int n1 = d1->ano * 365 + d1->dia;
+    long int n2 = d2->ano * 365 + d2->dia;
+
+    for(int i = 0; i < d1->mes - 1; i++){
+        n1 += diasDoMes[i];
+    }
+
+    n1 += qtdAnoBissexto(d1);
+
+    for(int i = 0; i < d2->mes - 1; i++){
+        n2 += diasDoMes[i];
+    }
+
+    n2 += qtdAnoBissexto(d2);
+
+    return (n1-n2) / 365;
 
 }
 

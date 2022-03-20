@@ -3,7 +3,9 @@
 
 CMakeFiles/TrabPOO.dir/Candidato.cpp.obj: ../Candidato.cpp
 CMakeFiles/TrabPOO.dir/Candidato.cpp.obj: ../headers/Candidato.h
+CMakeFiles/TrabPOO.dir/Candidato.cpp.obj: ../headers/Cidade.h
 CMakeFiles/TrabPOO.dir/Candidato.cpp.obj: ../headers/Data.h
+CMakeFiles/TrabPOO.dir/Candidato.cpp.obj: ../headers/Partido.h
 
 CMakeFiles/TrabPOO.dir/Cidade.cpp.obj: ../Cidade.cpp
 CMakeFiles/TrabPOO.dir/Cidade.cpp.obj: ../headers/Candidato.h

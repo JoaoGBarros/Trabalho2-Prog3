@@ -3,7 +3,8 @@
 //
 
 #include "headers/Candidato.h"
-
+#include "headers/Cidade.h"
+#include "headers/Data.h"
 
 
 Candidato::Candidato(string numero, int votosNominais, string situacao, string nome, string nomeUrna,
@@ -18,6 +19,10 @@ Candidato::Candidato(string numero, int votosNominais, string situacao, string n
     this->destinoVoto = destinoVoto;
     this->numeroPartido = numeroPartido;
     this->dataNascimento = new Data(dataNascimento);
+}
+
+void Candidato::setIdade(Data *dataEleicao){
+    this->idade = Data::diferencaAnosEntreDatas(dataEleicao, this->dataNascimento);
 }
 
 int Candidato::getNumeroPartido(){
